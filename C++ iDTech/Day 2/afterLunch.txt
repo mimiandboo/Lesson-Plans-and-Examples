@@ -1,0 +1,82 @@
+**Control Flow continued
+-i didn't go over jump statements or switch statements
+	but if you want to look over those, it'll be in gamePlan under control flow
+-opening and closing files
+-in the header space, type
+	#include <fstream>
+
+	fstream fileStream;
+	//this is an fstream variable which handles file input and output 	
+
+	fileStream.open("textFile.txt", ios::out);
+	//output mode to write into the files (yes confusing)
+	//opens the file textFile.txt, or creates it if 
+	if(!fileStream.is_open()){
+		cout << "Error" << endl;
+		return 0;	
+	}
+
+	fileStream << "Test writing into this file\n";
+	//use an insertion operator when writing into files
+	fileStream << "Another line of nonsense\n";
+	fileStream << "Last line\n";
+
+	fileStream.close();
+	
+	return 0;
+
+	//end of main()
+
+-next, lets try reading user input into a file
+	fstream file;
+	string line;
+	
+	file.open("newText.txt");
+	
+	if(!file.is_open()){
+		cout << "Error" << endl;
+		return 0;
+	}	
+
+	cout << "Please enter one sentence: " << endl;
+	cin >> line;
+	file << line;
+
+	return 0;
+	//end of main()	
+
+-now that we have a textFile.txt, lets read what was in it
+	(should be what we put into it)
+
+	fstream outputFile;
+	string line;
+	
+	outputFile.open("textFile.txt", ios::in);
+	//input mode to read out of it (opposite day)
+	if(!outputFile.is_open()){
+		cout << "Error" << endl;
+		return 0;
+	}
+	
+	//prints out every line in the file
+	while(getline(outputFile, line)){
+		cout << line << endl;
+	}
+
+	outputFile.close();
+
+	return 0;
+	//end of main
+
+-end of files lesson
+-next we will learn about random generator
+	-sometimes we want a random number, like maybe we want to roll a die
+	-lets make a random die generator
+
+	#include <iostream>
+
+	using namespace std;
+
+	int main(){
+				
+	}	

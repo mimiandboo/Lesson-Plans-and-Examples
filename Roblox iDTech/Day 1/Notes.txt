@@ -1,0 +1,72 @@
+**Intro:**
+ice breaker ideas: dance associated with name game, and birthday lineup (silent game)
+-set expectations
+	-be silent while I'm instructing
+	-stay off your phone, and other distractions
+	-if you have questions, raise the question flag
+	-be kind to fellow peers
+	-stay on task
+-create a gameplan account
+-make roblox account
+-open roblox studio
+-difference between minecraft and roblox is that one is more of a solo game while roblox can be more social
+
+
+**Obstacle course:**
+-make obstacle course
+	-start by selecting baseplate
+	-wasdeq (e is up and q is down)
+	-right click to move the camera around
+-insert parts
+-scale and rotate parts
+-anchor means it will anchor on the floor base (under properties)
+-stop here and let them build for 5 min
+-adding more platforms with duplicate
+	-right click
+	-then move
+-using spawnlocation (determines where player will spawn)
+-type in explorer "SpawnLocation" (or right click, insert object, and select spawnlocation)
+-to delete the floor, right click baseplate and click delete
+NOW TEST THE GAME (actually test throughout after adding spawn location)
+-save game by clicking file and save as
+-to test, click play
+-if you want to add color
+	-click a part
+	-click color tab
+	-choose a color
+-adding checkpoints
+-add another spawn location and rename it checkpoint
+-under properties, scroll until the team section
+-check AllowTeamChangeOnTouch which will change which team you're on (which can be used as the checkpoint)
+-uncheck the neutral team for each checkpoint location
+-change team color to whatever color (make sure they're not the same color)
+-must first enable teams on your game
+-under the model tab uptop, click service (it's under advanced section) (they're the gears blue and red)
+-click teams, then insert
+-add teams by clicking plus (under explorer)
+**will need a team for every checkpoint
+-for the starting point under team
+	-make sure autoassign is checked (this tells the game where you want your player to start)
+	-name it start
+	-make it the same color as the beginning spawning point
+-for the other two teams
+	-uncheck autoassign
+	-name it checkpoint1 or checkpoint2 (make sure it corresponds to each checkpoint)
+	-match the colors
+-next, how to publish your game
+-click file, publish roblox as
+-select new place
+-name it and give a description
+-click create
+-click done
+-now you can find it on the roblox website!
+-go to roblox online
+-login
+-click create at the top of the screen
+-click the button under your world that says private
+-and change to public
+-click the link next to start place, where anyone can access your published game
+
+-close file will close the current game and return to the starter menu
+
+--DONE--

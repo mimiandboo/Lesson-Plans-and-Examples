@@ -1,0 +1,117 @@
+Introduction:
+-set expectations:
+	-as group 3, I expect y'all to be role models for the other campers look up to you
+	-be kind to fellow peers
+	-stay on task
+	-listen to my instructions
+	-be silent while I'm instructing
+	-stay off your phone, and other distractions
+
+-small ice breaker game: dance associated with name game, birthday lineup game (silent game)
+
+**Basics of Visual Studio
+-create gameplan account
+-open VisualStudio IDE
+-create a new project
+-in new project settings
+	-make sure Visual C++ is selected on the left
+	-select windows console application
+	-name it MyFirstProgram
+	-save it to desktop
+-solutions explorer:
+	-click view, click solutions explorer
+	-solutions are sets of projects and files that make up a program
+	-projects are a set of files that share the same resource
+-lets work on some c++ code
+	-what's a main function do?
+		-it's the first to run in a piece of code
+	#include "stdafx.h"	//this is a header that helps compile the code
+	#include <iostream>	//always essential, it helps interact easily with users
+	using namespace std;	//helps you use standard (std) pre written code
+	//also use double forward slash to add comments
+	
+-output function
+	cout << "Hello World!" << endl;
+	/*Make sure you don't forget the semicolon! Code will often times break from forgetting small things
+	like the semicolon*/
+	return 0;
+	// << separates the part of that line (also called the insertion operator)
+	// endl outputs a new line after the string
+
+-building your solution:
+	-build, build solution
+	-compiles your code
+	-you will see your output in the output window, usually located at the bottom of the screen
+-to compile without debugging
+	-debug
+	-start without debugging
+-maybe try adding different messages, try adding more output functions, try adding more new lines!
+
+//f5 is a hotkey, allows you to run the code
+
+-variables
+	-what are variables?
+	-they are like containers that can hold different types of data
+	-strings, ints, chars, doubles, booleans, floats...etc
+	-string - a string of characters
+	-char - a single character
+	-int - an integer
+	-double - decimal numbers
+	-boolean - true or false
+	-floats - like doubles, but has greater boundaries, can hold greater numbers
+-lets add strings to our code thus far
+	string advice = "Hello World"	//this string variable holds the sentenct "Hello World"
+	// the name 'advice' is a name, you can change it to whatever you want
+	cout << advice << endl;
+	// or try cout << "Testing: " << advice << endl;
+
+-lets try using other variables
+	char var = 'a';	//for chars, use a single quotation
+	int num = 3;
+	double pi = 3.14;
+	bool tf = true;
+	string text = "This is a ";
+
+	cout << text << "char: " << var << endl;
+	cout << text << "int: " << num << endl;
+	cout << text << "double: " << pi << endl;
+	cout << text << "boolean: " << tf << endl;
+
+-names of variables
+	-it is important to name these variables names that relate to your variables
+	-if its a number variable name it int num or int number or something
+	-also camel casing in naming: thisIsCamelCasing
+
+-lets talk about inputs
+	-for outputs, we output something to the console
+	-so when we ask for inputs, we're asking for some interaction from the user
+	//add a new header file
+	#include <string>
+	
+	string myName;
+	cout << "Enter your name: " << endl;
+	cin >> myName;
+	cout << "Your name is " << myName << endl;
+
+	//prompts user for input
+	//cin uses the extraction operator instead of insertion operator 
+-lets create our own header files
+	-solution explorer
+	-header file
+	-add
+	-new item
+	-select .h
+	-in the name field, type Main
+	-click add
+	-**all header files should have #pragma once
+	at the top
+	#include <iostream>
+	#include <string>
+-now go back to our original file (the .cpp file)
+	#include "Main.h"
+	using namespace std; 	//if it's not there already
+		
+	cout << "test test" << endl;
+
+
+**END OF GETTING STARTED**

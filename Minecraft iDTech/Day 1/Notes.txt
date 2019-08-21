@@ -1,0 +1,101 @@
+Introduction:
+-set expectations:
+	-be kind to fellow peers
+	-stay on task
+	-listen to my instructions
+	-be silent while I'm instructing
+	-stay off your phone, and other
+
+**Getting started:
+-create an account on gameplan
+-open IntelliJ
+-follow gameplan's steps **very** carefully
+-once you are done, show me
+-if you have any questions, raise your hand quietly
+-once minecraft has opened, select single player
+	-create new world
+	-enter name for world
+	-select creative mode
+	-click create new world
+-press e in inventory
+-click miscellaneous tab
+-scroll to the bottom to access modded items
+	-these are the types of things you'll be making!
+-take 5 min to test out
+-Structure gel
+-go back to intelliJ projects
+	-expand forgeresourcepacket (little arrow button)
+	-src/main/java > comtech.idtech > item
+	-open ItemStructureGel.java
+-try changing the name
+-save
+-run your mod
+-changing tabs **
+	-you can change the tab in which the item will appear
+	-tab = CreativeTabs.BREWING
+	-save
+	-run
+-you can change the texture of the item
+	-expand src/main/resources > assets > examplemod > textures > items
+	-it has to end be a png file
+
+**after lunch
+-y'all were asking about items that actually does things
+	-we don't want just a structure gel that does nothing (that's boring)
+-src/main/java/com.idtech/item
+	-right click on item and select new java class 
+	-call it ItemSqueakyBall
+	-click ok
+-should open up a new java class file
+-next to public class ItemSqueakyBall
+	-type extends QuickItem
+	-right after ItemSqueakyBall, add a curly bracket and press enter
+		name = "Squeaky Ball";
+		tab = CreativeTab.MISC;
+		texture = "squeakyball";
+	-save and run
+	-right now this item doesn't do anything BUT listen closely, next instructions will tell you
+-when you right click on something in minecraft it calls the rightclick method (sends instruction to the computer that you right clicked
+	-so outside that first curly bracket inside, press enter enter
+	-type 
+		public void onRightClick(){
+			//code goes here
+			displayMessage("Squeak squeak!");
+		}
+	-save and run
+	-when holding this item right click and it should say "Squeak squeak!"
+-now lets try to actually make sound
+	-call the playSound function
+		playSound(SoundEvents.ENTITY_BAT_AMBIENT);
+	-save and run!
+	-now try doing different sounds
+**Building block
+-ForgeResourcePacket/src/main/java/com.idtech/block > blockbuilding
+	-try changing the name Castle Wall
+	-change the texture to castewall (it can be viewed under src/main/resources/assets/examplemods/textures/blocks)
+	-save and test
+-we are learning how to make your own building blocks for the next exercise
+-create a new java class in blocks under src/main/java/com.idtech/block
+	by right clicking and hovering over new and create a new java class
+-call it BreadBlock
+-extends QuickBlock
+-add name and texture
+	-use the breadblock texture
+	-in the same space between curly brackets, type 
+		itemDropped = Items.BREAD;
+	-save and test
+**teleport rod
+-lets go back to items
+-create a new java class in items
+	-extends QuickItem
+	-import net.minecraft.util.math.BlockPos
+	-src/main/java/com.idtech/item
+	-name and texture (choose your favorite texture from src/main/resources/assets/examplemods/textures/blocks)
+-outside of the first curly bracket, type 
+	public void onRightClick(){
+		BlockPos block = findBlockAtCursor(100);
+		moveToBlock(block);
+	}
+-save and run
+you got this! you are amazing and have been through worse! I got your back also you look really cute and if you need me for anything just let me know
+** LOG JULY 22 10:37 **

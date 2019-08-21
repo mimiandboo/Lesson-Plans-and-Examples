@@ -1,0 +1,122 @@
+*Lightning Hammer:
+-create an item 
+	-src/main/java/com.idtech/item 
+	-create new java class
+	-name it thorHammer
+-extends QuickItem next to the name of the Class
+-add {}
+-press enter
+-name and texture (find the hammer texture)
+	-src/main/resources/assets/examplemods/texture
+-after the first }
+	public void onRightClick(){
+		BlockPos block = findBlockAtCursor(20);
+		createLightningBolt(block);
+	}
+-save and run
+	(should only create a lightning strike)
+-now adding on
+	float explosionSize = 20;
+	boolean destroyBlocks = true;
+	createExplosion(block, explosionSize, destroyBlocks);
+-save and run
+-now some of y'all were asking me what about healing items?
+-lets make that
+**mug:
+-create a new java class in item
+	-src/main/java/com.idtech/item
+	-name it ItemMug
+	-extends QuickItem
+	-import 
+-create a name and texture
+	-use the mug, we'll be making it seem like drinking from this mug heals you
+-outside the first }
+	public void onRightClick(){
+		player.heal(10);
+		//try negative number
+	}
+-save and run
+-we can also spawn particles
+	spawnParticles(player, EnumParticleTypes.RED_STONE);
+-save and run
+**Creeping mold
+-sometimes we want a block to perform an action all on its own
+	-the bread block needs to be hit to perform an action (drop bread) remember?
+-create a new block java class
+	-src/main/java/com.idtech/block
+	-name it CreepingMold
+	-extends QuickBlock
+	-import net.minecraft.util.math.BlockPos
+	-{}
+	-name and texture
+-next step is to set it so that it's running at random intervals of time
+	setTickRandomly(true);
+-after }
+	public void onRandomTick(){
+		BlockPos neighbor = findNeighborBlock();
+		cloneAt(neighbor);
+	}
+-save and run
+
+**Rubber Block
+-make a new block to jump! make it rubbery
+-new java class in block 
+	-src/main/java/com.idtech/block
+	-name it RubberBlock
+	-extends QuickBlock
+	-add {}
+	-name and texture
+-after }
+	public void onEntityWalk(){
+		entity.motionY += 1;
+	}
+-save and run
+
+**Hot coals
+-here's some code to increase hardness in a block so that it's not easy to destroy in one hit 
+-create new java class in block
+	-src/main/java/com.idtech/block
+	-name it HotCoals
+	-extends QuickBlock
+	-add {}
+	-name and texture
+	-add itemDropped = Items.COAL;	//when mined it will drop coals
+	-setHarvestLevel(PICKAXE, WOOD);
+	-setHardness(10);
+	-setLightLevel(0.5f);
+
+-new Java project
+	-this is where I hear your ideas!
+	-we'll write these down
+-file > new > project
+	-hit next twice
+	-name it Intro to Java
+	-finish
+
+-Print statements
+	-create a new java class in src
+	-name it printPractice
+	-inside {}
+		public void main(String[] args){
+			System.out.println("Hello World!");
+		}	
+	-to run the code, right click on the file on the left side and click run (the one without Coverage)
+	or Ctrl Shift f10
+	-now try adding more print functions!
+	System.out.println("More print! Print more sentences");
+	
+-Variables
+	-string, char, boolean, int, float, double
+	-string to store text
+	-char to store characters
+	-boolean to store integers
+	-double to store decimals
+	-float to store more integers (bigger numbers)
+-creating a variable in code
+	-must first initialize it
+	String name = "Cookie";
+	int age = 100;
+	System.out.println("Hello! My name is " + name + " and I am " + age + " years old!");
+-save and run
+-initializing doubles
+	

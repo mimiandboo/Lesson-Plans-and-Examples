@@ -1,0 +1,53 @@
+*trap parts:
+-create a new part, name it Trap
+-insert a new script name it TrapScript
+-create a variable in the script local part = game.Workspace.Trap
+-using this create a function local function onTouch(otherPart), press enter (this function will trigger when touched by human)
+-now to check if the thing that touched the trap is human
+	-create a variable local character = otherPart.Parent
+	-create another local variable local humanoid = character:FindFirstChildWhichIsA("Humanoid")
+		-will return t/f
+-so now we can setup an if statement
+	-if humanoid then (if our variable humanoid holds true meaning the thing that touched the trap is a human) press enter
+	-humanoid.Health = 0 >> sets the health to zero
+-now to activate this function, call it after the last end
+-type part.Touched:Connect(OnTouch)
+	-Touched activates the function when the part (our trap) is triggered
+*reappearing bridge:
+-what if you want a button in your game that will activate a bridge? or something of the sort
+-property "CanCollide" controls whether you can collide with objects/players or not (pass through them like ghosts!)
+-add a part to your game
+-name it "Bridge"
+-select the bridge
+-scale it long
+-into the property window:
+	-set transparency to .5
+	-under behavior select Anchored
+	-uncheck CanCollide
+-now make a new part for your button to activate the bridge!
+-add a new part
+-name it "Button"
+-in the property window, change the block color to red (just so we can see it, change it later if you'd like)
+-anchor the object
+-add a script to it call it "buttonBridge"
+-in the script, delete hello world
+-create a variable to hold the parent of the script local button = game.Workspace.Button
+-create a second variable to hold the bridge part local bridge = game.Workspace.Bridge
+-create a new function called buttonPressed local function buttonPressed() press enter
+-now to write script in between the function and end
+	-change brick color to green (button.BrickColor = BrickColor.Green())
+	-set bridge transparency to 0 (bridge.Transparency = 0)
+	-set bridge collision to true (bridge.CanCollide = true)
+-now call the function after end (button.Touched:Connect(buttonPressed))
+FINISHED ON DAY2
+
+*on screen GUI:
+-what is a GUI? stands for graphical user interface, which means it's the part the user can see and interact with
+-go to the folder in roblox that says starter GUI in the explorer window
+-add a screenGui into that folder (this holds objects you would want to display, but does not display them)
+-insert a new object called ImageLabel in ScreenGui (this will hold the image you will display)
+-so let's find an image you want to use! search on google for a camp appropriate image to display in your gui
+-when you find your image, right click it, then selet save image as, and save to your student folder
+-now you can add this image to ImageLabel
+	-click imageLabel in the explorer page
+	-to add an image, make sure the game is published first***

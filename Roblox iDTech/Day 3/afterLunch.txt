@@ -1,0 +1,48 @@
+Donate Button
+located on GamePlan
+
+Create donate button:
+-Insert a "Part" to your world
+-name it "DonateButton"
+-add a "Click Detector" to it
+-add a new Script to the part
+-name the script "Donate"
+
+**PAUSE HERE AND WAIT FOR EVERYONE TO FINISH**
+
+Writing Script:
+-Create new variable to hold productID = 0 (for initialization)
+	local productId = 0
+-Create another variable to hold the donate button:
+	local donateButton = game.Workspace.DonateButton
+-create a function called "donate" that has one variable "player"
+	local function donate(player)
+-inside the function donate, use a game service that asks the player if they want to purchase your product
+	game:GetService("MarketplaceService"):PromptProductPurchase(player,productId)
+-finish with end
+-after end, call function whenever a player clicks the donate button
+	donateButton.ClickDetector.MouseClick:Connect(donate)
+
+**WAIT BETWEEN EACH STEP**
+
+Product ID - Roblox uses product id to track purchaseable items.
+to get a product id, you must publish your game on Roblox.
+to publish to Roblox, click file, and publish
+
+After publishing, Game Explorer menu should open. (if not click view tab, then game explorer)
+Right click on developer products and click product settings
+opens a new window Configure
+click developer products on the left
+click create new
+enter details of devloper product
+	-name, description, price
+click create
+
+after doing these steps, you should have a new productId
+select new Product ID and copy it
+replace productId = 0 to = new Product ID
+
+Test game in editor
+click on donation button
+
+**SAVE SAVE SAVE**

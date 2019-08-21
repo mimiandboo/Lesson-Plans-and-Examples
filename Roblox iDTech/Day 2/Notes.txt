@@ -1,0 +1,159 @@
+**Basic Scripting:**
+-"scripts" contain pieces of code/lines of code
+-to create first script:
+	-hover over ServerScriptService
+	-click plus symbol
+	-select script from drop down menu
+	-right click rename script
+	-for now, name script "PracticeScript"
+-print("Hello World!") is an example of a print function, it prints out Hello World!
+-run the code/press play
+-at the bottom of the screen shows the output (if you still can't see it, go to view, select output)
+-try changing the output message
+**Stop, and help with errors if any**
+-to change brick color:
+	-select an existing part or create a new one
+	-rename it to PracticePart
+	-add new script to PracticePart
+	-rename script "ChangeBrickColor"
+-to write a comment, in the scripting session start with "--" and write whatever afterwards
+-under the comment, type "game" with lowercase g, then end it with a period with no space
+	-why a period? it's called "Dot notation"
+	-allows user to have access to different files that define the object
+	-in this case we're trying to change the color of the brick, which there is a function for that
+	-so we have to find it from the Roblox studio library
+-next type "Workspace" then another period
+-next type the name of the part you want to use (we're using PracticePart) 
+	-there's also autocomplete, you can use the arrow key then enter to autocomplete
+-then type another period and BrickColor
+-then space, BrickColor period, and the color of your choice (blue, green, red...)
+-coding with loops
+-open the script we were just using, ChangeBrickColor
+-create a locl variable
+	-variable is an empty something where you can keep numbers, or names, or alphabet characters...
+	-local means that you have access to it only in this script area
+	-camel casing = how we name variables, where the first word is always lowercase, but any other
+		added word is capitalized
+		-EX: helloWorld
+-to create a local variable, type local, then name of variable (we will be using loopingPart)
+-set it = to game.Workspace.PracticePart (or whatever part you're using)
+-now the variable loopingPart holds the part game.Workspace.PracticePart, so we won't have to type it out everytime
+-try replacing what we just wrote with the variable we just made
+	-loopingPart.BrickColor = BrickColor.blue()
+-what is a while loop? (in Lua, they're called while true do loops)
+	-it's a piece of code that will do the same task up until a set condition
+	-so like, you say that you want it to loop until a number is equal to 10 and prints out Hello World
+	-how you would write that: while(i = 1){ print out "Hello World!", i++ }
+	-stop and explain everything if needed
+-in the same script, press enter a few times (whitespace makes code look cleaner)
+-type while true do, then press enter
+-after while true do loops, make sure to add end where you want the code to loop (usually autocompletes after you press enter)
+-let's make a forever changing rainbow part!
+-to do this:
+	-in between the while loop type loopingPart.BrickColor = BrickColor.Red()
+	-because the color change is too quick if we keep doing this with different colors, we add a wait() function
+	-on the next line add wait(1) >> number inside represents the number of seconds you want the code to wait
+	-now copy paste those two lines of code underneath itself, and change the color!
+	-save and test
+-now you should have a changing rainbow part
+-try it on your own for a little bit (give them 5 min)
+-Gonna talk about if/then statements now
+-conditional statements are lines of code that evaluate true or false
+-ask some t/f questions
+-so an if/then statements asks if *this is t(?)* then *this will happen*
+	-otherwise it doesn't happen or you have an else statment
+-Let's try if/then statments
+-create a new part and name it IfThenPart
+-create a new script for the part
+-name the script IfThenScript
+-"It says delete HelloWorld, but you can keep it if you like. It's your code, you can do what you want"
+-we will check if 3+3 is = 6 (we all know it is but just to demonstrate, or do other numbers)
+-type if 3+3 == 6
+	-this double equals is essential because in coding, we use a single equal sign to assign a variable it's number or letter, etc
+	-but in this case we're checking to see if this equation is *EQUAL* to 6
+-on another line type "then" then enter
+-so if 3+3 == 6, then we should change the brick color
+-in between then and end, type "game.Workspace.IfThenPart.BrickColor = BrickColor.Green()
+-now test
+-now test if statments out, you can do many different comparisons like if 2-1, or if 4*2, or if 9/3...
+	-you can even compare variables
+		-say you had a variable local test = 3 (we're assigning the test variable the value 3 so 1 equal sign)
+		-then you can check if test == 3...
+		-many different possibilities
+-you guys wanna try it out? quickly learn about "else" so we can test out a bunch of things?
+-Adding else
+-what if you had if 3+4 == 6 (it isn't right, right?)
+-else is used when the if statement isn't true
+-so quickly change the if statement into if 3+4 == 6
+-now we add the else between then and end
+-now lets add an action so that if the statement isn't true, then something else happens!
+	-game.Workspace.IfThenPart.BrickColor = BrickColor.Red()
+-now SAVE and test it
+-Now have fun with it! test it out! raise the question flags if you have any questions
+-Make sure to save your progress always
+
+**Terrain Editor**
+-Terrain Editor allows you to personalize your world, so lets have a look
+-if you haven't saved already !SAVE!
+-click file, open a new project
+-click the terrain Editor button at the top of the screen
+-lets use the generate tool (it'll help you make a huge world in a matter of min (or dare i say...seconds?)
+-click the generate tool
+-Map size (how big do you want this world to be?)
+	-lets stick with medium for now, big worlds take a long time to boot up
+-seed number helps you regenerate this exact same world again, so write down the seed number
+-if caves is checked you'll have caves in your world (self explanatory)
+-biome >> what is that
+	-what type of environment your world will be
+		-grassland? tundra (Antarctica)? desert? etc
+	-refers to a section of your map
+-biome size determines the size of the biome
+-under the biome type, check what type you want. if unchecked it gives you no biome of the type
+-click generate once you're done
+-Add and Subtract tools
+-add tool adds terrains wherever you click
+-subtract takes them away
+	-size changes brush size
+	-strength is how much is addes and subtracted
+	-shape >> circle of cube
+	-material adds color & texture to your terrain
+	-checking auto will use the terrain so you don't have do a lot of work fixing things
+	-snap to grid will force your mouse to follow an invisible grid for more control
+	-ignore water lets you work on things over the water without affecting the water
+-paint tool changes material of wherever you click
+-grow and erode tools are similar to add and subtract but smooths out the world a little better
+-smooth and region tools
+	-smooth tool smooths rough edges
+	-region tools selects different regions of your map allowing you to move, resize, copy, paste them
+-15 min, do what you want with this world
+-moving on to lighting and fog
+-select lighting in the workspace
+-in the properties window, tweak with these things
+	-ambient property: applies a color to your world
+	-brightness: how easy it is to see stuff in your world (like horror games are usually dark and hard to see)
+	-Time of day: main setting you want to change for a darker world (uses military time)
+-Fog is at the bottom of the light properties
+	-fog color: default is gray but you can change it to whatever you like
+	-fog end: the default is no fog, but the smaller the number is, the thicker the fog (fog <10,000)
+	-fog start: 0 is default. this shows the range you can see in the fog
+-now lets try putting it alllllllll together
+*Let's talk about the Toolbox
+	-lets you add premade models of things like trees, rocks, houses, cars, etc
+-but before we try it, we should talk about toolbox more in depth
+-anyone is allowed to upload toolbox, so although there are great things about it, some people take this advantage to
+	upload viruses to toolbox
+-so before you try using a model from toolbox, save your game (as a new file so file > save as > 
+	first name_last name_BTB (before toolbox)
+-now search for the model you want, drag it and add it
+-how to more safely determine the model
+	-shield marks are models reviewed by roblox that do not have a virus
+	-check the amount of votes (>20), and the upvotes to downvotes ratio
+-if you think you have a virus immediately raise up the question flag
+-let me know and i will try to fix it
+-we don't want any of you to lose your work
+-how to detect?
+	-sometimes it's obvious, sometimes it'll change the names of your save files or variables, etc
+-please let me know asap
+-now try it on your own for 10 min
+[Hello, Noah here! Take a deep breath, you got this! ^-^]
+^LOG 07/02/2019

@@ -1,0 +1,33 @@
+**Storyteller**
+-create a new project, call it "UserStory"
+-include string and iostream
+	#include <string>
+	#include <iostream>
+	using namespace std;
+
+-before we plan the code, we need to plan a story
+	-lower the laptop lids, give them 5 min to write a 7-8 line story
+	-listen to the stories
+
+-come back to the computer
+	-output those lines using cout
+	-look back those lines
+		-what is the subject of your story
+		-adjectives used?
+		-setting?
+	-create a variable for each of these
+	string subject = "";
+	string adjective = "";
+	string setting = "";
+	
+	-now ask for user input for a subject, adjective, and setting!
+	cout << "Welcome to story builder!" << endl;
+	cout << "Enter a subject: " << endl;
+	cin >> subject;
+	cout << "Enter an adjective: " << endl;
+	cin >> adjective;
+	cout << "Enter a setting: " << endl;
+	cin >> setting;
+
+	//then print out the story again
+	//kinda make like a madlibs

@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "examplemod:squeaky ball",
+      "data": 3
+    },
+    {
+      "item": "minecraft:torch"
+    }
+  ],
+
+  "result":
+  {
+    "item": "minecraft:apple",
+    "count": 1
+  }
+}

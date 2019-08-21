@@ -1,0 +1,146 @@
+-arithmetic operators 
+	() : parentheses
+	++/-- : increment or decrement by 1
+	+/-///* : plus, minus, divide, multiply
+	= : assignment
+	+=/-=/*=//=/%=
+	% : modulus
+		-remainder essentially
+		3 % 2 = ? (1)
+		29 % 3 = ? (2)
+-try this:
+	int level = 1;
+	int points = 20;
+
+	cout << "Level " << level << endl;
+	cout << "Points " << points << endl;
+	
+	points += 5;
+	level++;
+	
+	cout << "New level " << level << endl;
+	cout << "New points " << points << endl;
+	
+	double divide = points / level;	
+	double mod = points % level;
+	
+	cout << "Points / level " << divide << endl;
+	cout << "Points % level " << mod << endl;
+	//try new things, check everything out
+	//will debug if help is needed
+
+-if then statements
+	-conditional statements
+	-if it is raining outside, then use an umbrella
+	-if the instructor is talking, then you are quiet
+	-to practice, lets create a new C++ program 
+
+	#include <iostream>
+	#include <string>
+	
+	using namespace std;
+
+	//pretend a main function is here
+	int testNum = 5;
+
+	if(testNum % 2 == 0){
+		cout << "The number is even!" << endl;
+	}
+	else{
+		cout << "The number is odd!" << endl;
+	}
+
+	//now try improving this program so it takes in user input
+	//and determines if the number is even or odd
+********************************************************************
+	int testNum;
+	
+	cout << "Enter a number: " << endl;
+	cin >> testNum;
+	
+	if(testNum % 2 == 0){
+		cout << "The number is even!" << endl;
+	}
+	else{
+		cout << "The number is odd!" << endl;
+	}
+
+//we could also add else if
+
+	if()
+	else if()
+	else if()
+	else
+
+-difference between = and ==?
+	-one's an assignment, one is a conditional
+	-test = 20, means that the variable test has been assigned the number 20
+	-if(test == 20), this asks if test is equal to 20, will return true or false
+
+-for if statements
+	-you can use ==, !=, <, >, <=, >=
+	-! means not; != does not equal
+
+-write a program that'll read a user input of a grade (int)
+	and will display the letter grade corresponding to it
+	ex: if i enter 90, it will display an A
+	if i enter anything under 60, display an F
+
+-next, try writing the same kind of program, but will read a char instead
+	so i enter an A, and it'll display a message like "Well done! You got an A!"
+	or I enter F, and it'll display "You failed. Do better work next time"
+	or something
+
+-while loops
+	-will repeat a code a number of times *while* a condition is true
+	int num = 0;
+	while(num < 3){
+		num++;	//increments the variable num by 1 through each loop
+		cout << "Number = " << num << endl;
+	}
+	
+	cout << "Final number is " << num << endl;
+
+-make a program that'll continue asking the user to guess a number (your pick) from 1 - 20
+	make sure that if they get it wrong then you ask again, and you continue this until they get it right
+	
+	int answer = 18;
+	int guess;
+
+	cout << "Guess a number from 1 - 20!" << endl;
+	cin >> guess;
+
+	while(guess != answer){
+		cout << "Guess again!" << endl;
+		cin >> guess;
+	}
+
+-for loop: runs a block of code a set number of times
+	not based on a conditional
+
+	for(int i = 0; i < 10; i++)
+	//for initializes the for loop
+	//int i = 0; initializes a variable "i" in the parentheses
+	//i < 10; means that this will loop while i is less than 10
+	//i++ increments i every loop
+
+-i will create a for loop that'll just print out Hello World 5 times
+	for(int i = 0; i < 5; i++){
+		cout << "Hello World!" << endl;
+	}
+
+-next is a longer for loop about how much money i have (given that i don't earn any, and just continue to spend $5)
+	int total = 100;	//i have 100 dollars
+	
+	cout << "I have " << total << " dollars" << endl;
+
+	for(int i = total; i > 0; i++){
+		total -= 5;
+		cout << "Now I have " << total << endl;
+	}
+
+	cout << "I now have " << total << " dollars" << endl;
+
+https://cookie076327.typeform.com/to/fqyRr
+^^small knowledge assessment quiz
+
